@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration</title>
+
+<link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+
+<body oncontextmenu="return false;" oncopy="return false"
+	oncut="return false" onpaste="return false">
+
+	<div class="login-box">
+		<form action="registraiondetails" method="post">
+
+			<div id="container" style="width: 100%;">
+				<div id="left" style="float: left; width: 50%;">
+					<h2 style="margin-top: 13px;">Registration Details</h2>
+					<br> <label>First Name</label><br>
+					<!-- <input type="text" name="firstname" autofocus placeholder="nixinn" required="" > -->
+					<input type="text" id='nameInput' name="firstname" autofocus
+						placeholder="nixinn" required=""
+						onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
+					<br> <label>Last Name</label><br>
+					<!-- <input type="text"  name="lastname" placeholder="insights" required=""> -->
+					<input type="text" id='nameInput' name="lastname"
+						placeholder="insights" required=""
+						onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
+					<br> <label>Date Of Birth</label><br> <input
+						style="width: 200px;" type="date" name="dob" required="">
+					<br> <label>Email ID</label> <br> <input
+						style="width: 200px;" type="email" name="email"
+						placeholder="nixinn@xyz.com" required=""> <br> <label>Contact
+						Number</label><br>
+					<!-- <input  type="text" pattern="[0789][0-9]{9}" minlength="9" maxlength="10" name="contact" placeholder="0123456789" required="" > -->
+					<input type="text" class="form-control" id="phone"
+						pattern="[0789][0-9]{9}" minlength="9" maxlength="10"
+						name="contact" placeholder="0123456789" required=""
+						spellcheck="false"
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+				</div>
+			</div>
+
+			<div id="container" style="width: 100%;">
+				<div id="right" style="float: right; width: 50%;">
+					<h2 style="margin-top: 13px;">Educational Details</h2>
+					<br>
+					<div class="form-group">
+						<label>Select Degree</label><br> <select name="nameofdegree"
+							required="">
+							<option value="B.Tech">B.E/B.Tech</option>
+							<option value="MBA">MBA</option>
+							<option value="M.Tech">M.Tech</option>
+							<option value="MCA">MCA</option>
+						</select>
+					</div>
+					<br> <label>Branch</label> <br>
+					<!-- <input type="text"  name="branch" placeholder="CSE / ECE / EEE" required="" > -->
+					<input type="text" id='nameInput' name="branch"
+						placeholder="CSE / ECE / EEE" required=""
+						onkeypress='return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))'>
+					<br> <label>Degree Percentage (%)</label><br>
+					<!-- <input type="text" pattern="[0-9]" size="2" minlength="2" maxlength="2" name="per" placeholder="35-100" required="" > -->
+					<input type="text" class="form-control" size="2" minlength="2"
+						maxlength="2" id="phone" name="per" placeholder="35-100"
+						required="" spellcheck="false"
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+					<br> <label>Year of passout</label> <br>
+					<!-- <input type="text" size="4" minlength="4" maxlength="4" name="yop" placeholder="2018" required="" > -->
+					<input type="text" class="form-control" size="4" minlength="4"
+						maxlength="4" id="phone" name="yop" placeholder="2018" required=""
+						spellcheck="false"
+						oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+					<br>
+				</div>
+			</div>
+			<br> <input type="submit" class="btn btn-default"
+				name="Register">
+	</div>
+	</form>
+</body>
+</html>
